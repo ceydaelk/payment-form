@@ -49,7 +49,7 @@ const PaymentForm = () => {
             name="cardName"
             value={formData.cardName}
             onChange={handleChange}
-            placeholder="Ahmet Yılmaz"
+            placeholder="Ceyda Elik"
             required
           />
         </div>
