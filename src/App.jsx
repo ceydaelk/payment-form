@@ -1,11 +1,11 @@
 import PaymentForm from './components/PaymentForm'
-import './App.css'
 
 function App() {
   return (
-    <div className="app-container">
-      <h1>Ödeme Formu</h1>
-      <PaymentForm />
+    <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem' }}>
+      <div style={{ width: '500px', minWidth: '500px' }}>
+        <PaymentForm />
+      </div>
     </div>
   )
 }

@@ -1,5 +1,4 @@
 .payment-form-container {
-  max-width: 450px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #ffffff;
@@ -13,7 +12,6 @@
   color: #000;
   margin: 0;
   text-align: left;
-  margin-bottom: 8px;
 }
 
 .subtitle {
@@ -44,12 +42,14 @@
 
 .form-group input,
 .form-group select {
+  width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.2s ease;
   background-color: #fff;
+  color: #000;
 }
 
 .form-group input::placeholder {
@@ -64,8 +64,19 @@
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* Güvenlik kodu input alanı için özel stil */
+.form-row .form-group:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-row .form-group:last-child input {
+  width: 100px;
 }
 
 .submit-button {
@@ -88,4 +99,15 @@
 
 .submit-button:active {
   transform: scale(0.98);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #dc3545;
 } 
